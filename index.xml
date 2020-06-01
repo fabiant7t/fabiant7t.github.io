@@ -6,7 +6,6 @@
     <description>Recent content on www.topfstedt.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <lastBuildDate>Sat, 30 May 2020 15:27:40 +0200</lastBuildDate>
     
 	<atom:link href="https://www.topfstedt.de/index.xml" rel="self" type="application/rss+xml" />
     
@@ -24,15 +23,6 @@ E-Mail: fabian@topfstedt.de
 Credits Diese Website generiere ich mit HUGO und dem Console-Theme.
 Erklärung zur Informationspflicht (Datenschutzerklärung) Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich verarbeite Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003). In diesen Datenschutzinformationen informiere ich Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen meiner Website.
 Beim Besuch meiner Webseite wird Ihre IP-Adresse, Beginn und Ende der Sitzung für die Dauer dieser Sitzung erfasst.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://www.topfstedt.de/posts/helloworld/</link>
-      <pubDate>Sat, 30 May 2020 15:27:40 +0200</pubDate>
-      
-      <guid>https://www.topfstedt.de/posts/helloworld/</guid>
-      <description>Hello World</description>
     </item>
     
   </channel>
