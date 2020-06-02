@@ -6,9 +6,20 @@
     <description>Recent content on www.topfstedt.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
+    <lastBuildDate>Sun, 31 May 2020 15:27:40 +0200</lastBuildDate>
     
 	<atom:link href="https://www.topfstedt.de/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fabian</title>
+      <link>https://www.topfstedt.de/fabian/</link>
+      <pubDate>Sun, 31 May 2020 20:32:11 +0200</pubDate>
+      
+      <guid>https://www.topfstedt.de/fabian/</guid>
+      <description>Ich lebe mit meiner Frau Silja und unseren Kindern Oskar und Luisa in Wien. Genauer im Stadtentwicklungsgebiet Seestadt Aspern, wo wir 2014 in der Baugruppe JAspern das erste Wohnhaus fertigstellten und bezogen und seither eine aktive Nachbarschaft genießen und mitentwickeln.
+Nach einem Informatikstudium in Berlin und ein paar Jahren als freiberuflicher Softwareentwickler gründete ich 2008 die schnee von morgen webTV GmbH mit. In einem großartigen Team in Berlin, Hamburg und Wien realisieren und betreiben wir die webTV-Plattformen dctp.</description>
+    </item>
     
     <item>
       <title>Impressum und Datenschutz</title>
@@ -23,6 +34,15 @@ E-Mail: fabian@topfstedt.de
 Credits Diese Website generiere ich mit HUGO und dem Console-Theme.
 Erklärung zur Informationspflicht (Datenschutzerklärung) Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich verarbeite Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003). In diesen Datenschutzinformationen informiere ich Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen meiner Website.
 Beim Besuch meiner Webseite wird Ihre IP-Adresse, Beginn und Ende der Sitzung für die Dauer dieser Sitzung erfasst.</description>
+    </item>
+    
+    <item>
+      <title>Selma</title>
+      <link>https://www.topfstedt.de/posts/selma/</link>
+      <pubDate>Sun, 31 May 2020 15:27:40 +0200</pubDate>
+      
+      <guid>https://www.topfstedt.de/posts/selma/</guid>
+      <description>Selma - die Selbermacherei Verein zur Förderung des gemeinsamen Handwerkens, Reparierens, Hackens und skulpturalen Arbeitens</description>
     </item>
     
   </channel>
