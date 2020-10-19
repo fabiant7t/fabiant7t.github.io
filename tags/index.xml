@@ -5,10 +5,6 @@
     <link>https://www.topfstedt.de/tags/</link>
     <description>Recent content in Tags on www.topfstedt.de</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>de-de</language>
-    
-	<atom:link href="https://www.topfstedt.de/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>de-de</language><atom:link href="https://www.topfstedt.de/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
