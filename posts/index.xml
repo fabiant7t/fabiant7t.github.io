@@ -6,7 +6,16 @@
     <description>Recent content in Posts on www.topfstedt.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <lastBuildDate>Mon, 19 Oct 2020 17:27:40 +0200</lastBuildDate><atom:link href="https://www.topfstedt.de/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Oct 2020 07:30:00 +0200</lastBuildDate><atom:link href="https://www.topfstedt.de/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open-Source-Laptop: Clevo L141CU mit eigener Tastaturbelegung</title>
+      <link>https://www.topfstedt.de/posts/open-source-laptop-keyboard/</link>
+      <pubDate>Tue, 20 Oct 2020 07:30:00 +0200</pubDate>
+      
+      <guid>https://www.topfstedt.de/posts/open-source-laptop-keyboard/</guid>
+      <description>Ein voriger Blogbeitrags zeigt, wie Firmware und EC-Software von system76 auf ein Clevo L141CU aufgespielt werden. Die EC-Software geht davon aus, dass das Notebook über eine Tastatur mit ANSI-Layout verfügt. Es ist in den USA gängig und die einzige Option des Lemur Pro. In Europa ist das [ISO-Layout][(https://deskthority.net/wiki/ANSI_vs_ISO) üblich und auch mein Clevogerät nutzt es. Nach dem unmodifizierten Aufspielen der EC-Software sind die Tasten links unter der Eingabetaste und die rechts der linken Umschalttaste funktionslos.</description>
+    </item>
+    
     <item>
       <title>Open-Source-Laptop: Clevo L141CU mit Coreboot und freiem EC</title>
       <link>https://www.topfstedt.de/posts/open-source-laptop/</link>
