@@ -14,7 +14,6 @@
       
       <guid>https://www.topfstedt.de/posts/co2-ampel-im-eigenbau/</guid>
       <description>Hauptübertragungsweg von SARS-CoV-2 scheinen Tröpfchen und Aerosole zu sein. Gegen Tröpfchen hält man Abstand, gegen Aerosole lüftet man an. Nur wann und wie lange?
-{{- $image := resources.Get “images/co2ampel.jpeg” -}}
 Wir Menschen atmen etwa 4% CO2 aus, der CO2-Pegel steigt ohne Luftaustausch also kontinuierlich an und ist damit ein guter Luftqualitätsindikator. Die CO2-Konzentration wird in Teilen pro Million (ppm) gemessen und beträgt ca 400 ppm in der Frischluft. Das ist also die untere Grenze und bei den Sensoren der Nullwert.</description>
     </item>
     
