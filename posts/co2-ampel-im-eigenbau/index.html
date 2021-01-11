@@ -57,7 +57,7 @@ Jan. 11, 2021
 <br/><br/>
 <p>Hauptübertragungsweg von SARS-CoV-2 scheinen Tröpfchen und Aerosole zu sein. Gegen Tröpfchen hält man Abstand, gegen Aerosole lüftet man an. Nur wann und wie lange?</p>
 <p>Wir Menschen atmen etwa 4% CO2 aus, der CO2-Pegel steigt ohne Luftaustausch also kontinuierlich an und ist damit ein guter Luftqualitätsindikator. Die CO2-Konzentration wird in Teilen pro Million (ppm) gemessen und beträgt <a href="https://www.co2.earth/">ca 400 ppm</a> in der Frischluft. Das ist also die untere Grenze und bei den Sensoren der Nullwert. Das Robert-Koch-Institut <a href="https://edoc.rki.de/handle/176904/2849">bewertete 2017</a> eine Innenraumkonzentration bis 1000 ppm als unbedenklich, 1000-2000 ppm als auffällig und über 2000 ppm als inakzeptabel. Denkt man sich ein Messgerät als Ampel, erscheinen mir das gute Werte für den Status grün, orange und rot zu sein.</p>
-<p>Um den Status-Quo zu messen, nutze ich den nichtdispertiven Infrarotsensor [https://de.wikipedia.org/wiki/Nichtdispersiver_Infrarotsensor] <a href="https://www.winsen-sensor.com/d/files/PDF/Infrared%20Gas%20Sensor/NDIR%20CO2%20SENSOR/MH-Z19%20CO2%20Ver1.0.pdf">MH-Z19B</a> und einen [ESP8266-Mikrocomputer]. Eine RGB-Leuchtdiode warnt optisch und ist auch in der Helligkeit variierbar. Den Diffusor spendete ein Bewegungsmelder. Ein Piezobuzzer kann monophone Melodien piepsen und beispielsweise mit dem Titanic-Theme für Untergangsstimmung sorgen. Oder einfach schweigen, wie aktuell. Ein kleines Display zeigt den aktuellen Messwert an. <a href="https://www.thingiverse.com/thing:4688450">Das Gehäuse</a> habe ich von Thingiverse, es ist aber für einen kleineren Mikrocomputer gemacht und damit alles etwas eng.</p>
+<p>Um den Status-Quo zu messen, nutze ich den <a href="https://de.wikipedia.org/wiki/Nichtdispersiver_Infrarotsensor">nichtdispertiven Infrarotsensor</a> <a href="https://www.winsen-sensor.com/d/files/PDF/Infrared%20Gas%20Sensor/NDIR%20CO2%20SENSOR/MH-Z19%20CO2%20Ver1.0.pdf">MH-Z19B</a> und einen ESP8266-Mikrocomputer. Eine RGB-Leuchtdiode warnt optisch und ist auch in der Helligkeit variierbar. Den Diffusor spendete ein Bewegungsmelder. Ein Piezobuzzer kann monophone Melodien piepsen und beispielsweise mit dem Titanic-Theme für Untergangsstimmung sorgen. Oder einfach schweigen, wie aktuell. Ein kleines Display zeigt den aktuellen Messwert an. <a href="https://www.thingiverse.com/thing:4688450">Das Gehäuse</a> habe ich von Thingiverse, es ist aber für einen kleineren Mikrocomputer gemacht und damit alles etwas eng.</p>
 <p>Die Firmware habe ich mit <a href="https://esphome.io/">ESPHome</a> geschrieben, damit kann man wunderbare IoT-Dinge bauen und in <a href="https://www.home-assistant.io/">Homeassistant</a> integrieren. Oder auch einfach nur Things - ohne Internet - wie eben diese Ampel. Übrigens ein Wiener Projekt! Der (offene) Code folgt unten.</p>
 <p>Die Kinder haben in der Neubauschule eine kontrollierte Raumlüftung. Ich habe gerade für jede Klasse eine Ampel gebaut, vielleicht ist aber auch schon ein Steuergerät mit Anzeige vorhanden. Man ist so selten in der Schule gerade. Für uns im Passivhaus ist es interessant mit echten Werten den Luftaustausch der drei Lüftungsstufen zu verstehen.</p>
 <h2 id="bauteile">Bauteile:</h2>
@@ -72,17 +72,50 @@ Jan. 11, 2021
 <li>Jumperkabel weiblich-weiblich</li>
 </ul>
 <h2 id="anschlüsse-koala">Anschlüsse Koala</h2>
-<pre><code>---------------------------------------
-| Bauteil | Bauteil-Pin | ESP8266-Pin |
-| --------|-------------|-------------|
-| OLED    | SCL         | D1          |
-| OLED    | SDA         | D2          |
-| Buzzer  | VCC         | D5          |
-| RGB-LED | Din         | D6          |
-| CO2     | RX          | TX          |
-| CO2     | TX          | RX          |
----------------------------------------
-</code></pre><h2 id="software-für-esphome">Software (für ESPHome)</h2>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Bauteil</th>
+<th>Bauteil-Pin</th>
+<th>ESP8266-Pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OLED</td>
+<td>SCL</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>OLED</td>
+<td>SDA</td>
+<td>D2</td>
+</tr>
+<tr>
+<td>Buzzer</td>
+<td>VCC</td>
+<td>D5</td>
+</tr>
+<tr>
+<td>RGB-LED</td>
+<td>Din</td>
+<td>D6</td>
+</tr>
+<tr>
+<td>CO2</td>
+<td>RX</td>
+<td>TX</td>
+</tr>
+<tr>
+<td>CO2</td>
+<td>TX</td>
+<td>RX</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="software-für-esphome">Software (für ESPHome)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># Copyright 2021 Fabian Topfstedt</span>
 <span style="color:#75715e"># Published under MIT license (https://opensource.org/licenses/MIT)</span>
 
@@ -116,7 +149,6 @@ Jan. 11, 2021
 
 <span style="color:#f92672">captive_portal</span>:
 
-<span style="color:#75715e"># Enable logging</span>
 <span style="color:#f92672">logger</span>:
   <span style="color:#75715e"># Disable logging to serial</span>
   <span style="color:#f92672">baud_rate</span>: <span style="color:#ae81ff">0</span>
@@ -194,7 +226,7 @@ Jan. 11, 2021
       <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;MH-Z19 CO2 Value&#34;</span>
       <span style="color:#f92672">id</span>: <span style="color:#ae81ff">mhz19_co2</span>
       <span style="color:#f92672">on_value_range</span>:
-        - <span style="color:#f92672">below</span>: <span style="color:#ae81ff">1200</span>
+        - <span style="color:#f92672">below</span>: <span style="color:#ae81ff">1000</span>
           <span style="color:#f92672">then</span>:
             - <span style="color:#f92672">light.turn_on</span>:
                 <span style="color:#f92672">id</span>: <span style="color:#ae81ff">led</span>
@@ -202,8 +234,8 @@ Jan. 11, 2021
                 <span style="color:#f92672">red</span>: <span style="color:#ae81ff">0.0</span>
                 <span style="color:#f92672">green</span>: <span style="color:#ae81ff">1.0</span>
                 <span style="color:#f92672">blue</span>: <span style="color:#ae81ff">0.0</span>
-        - <span style="color:#f92672">below</span>: <span style="color:#ae81ff">1800</span>
-          <span style="color:#f92672">above</span>: <span style="color:#ae81ff">1200</span>
+        - <span style="color:#f92672">below</span>: <span style="color:#ae81ff">2000</span> 
+          <span style="color:#f92672">above</span>: <span style="color:#ae81ff">1000</span>
           <span style="color:#f92672">then</span>:
             - <span style="color:#f92672">light.turn_on</span>:
                 <span style="color:#f92672">id</span>: <span style="color:#ae81ff">led</span>
@@ -211,7 +243,7 @@ Jan. 11, 2021
                 <span style="color:#f92672">red</span>: <span style="color:#ae81ff">1.0</span>
                 <span style="color:#f92672">green</span>: <span style="color:#ae81ff">0.8</span>
                 <span style="color:#f92672">blue</span>: <span style="color:#ae81ff">0.0</span>
-        - <span style="color:#f92672">above</span>: <span style="color:#ae81ff">1800</span>
+        - <span style="color:#f92672">above</span>: <span style="color:#ae81ff">2000</span> 
           <span style="color:#f92672">then</span>:
             - <span style="color:#f92672">light.turn_on</span>:
                 <span style="color:#f92672">id</span>: <span style="color:#ae81ff">led</span>
