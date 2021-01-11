@@ -6,7 +6,17 @@
     <description>Recent content on www.topfstedt.de</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <lastBuildDate>Fri, 30 Oct 2020 12:15:00 +0200</lastBuildDate><atom:link href="https://www.topfstedt.de/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Jan 2021 21:30:00 +0200</lastBuildDate><atom:link href="https://www.topfstedt.de/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CO2-Ampel im Eigenbau</title>
+      <link>https://www.topfstedt.de/posts/co2-ampel-im-eigenbau/</link>
+      <pubDate>Mon, 11 Jan 2021 21:30:00 +0200</pubDate>
+      
+      <guid>https://www.topfstedt.de/posts/co2-ampel-im-eigenbau/</guid>
+      <description>Hauptübertragungsweg von SARS-CoV-2 scheinen Tröpfchen und Aerosole zu sein. Gegen Tröpfchen hält man Abstand, gegen Aerosole lüftet man an. Nur wann und wie lange?
+Wir Menschen atmen etwa 4% CO2 aus, der CO2-Pegel steigt ohne Luftaustausch also kontinuierlich an und ist damit ein guter Luftqualitätsindikator. Die CO2-Konzentration wird in Teilen pro Million (ppm) gemessen und beträgt ca 400 ppm in der Frischluft. Das ist also die untere Grenze und bei den Sensoren der Nullwert.</description>
+    </item>
+    
     <item>
       <title>&#34;Hack dir einen Open-Source-Laptop&#34; Lightning-Talk #pw20</title>
       <link>https://www.topfstedt.de/posts/hack-dir-einen-open-source-laptop-pw20/</link>
